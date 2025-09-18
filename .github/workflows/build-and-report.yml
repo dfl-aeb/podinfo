@@ -57,7 +57,8 @@ jobs:
             type=ref,event=branch
             type=ref,event=tag
             # latest nur auf default-Branches
-            type=raw,value=latest,enable=${{ github.ref_name == 'master' || github.ref_name == 'main' }}
+            # temporär auskomment, für harness pipeline test
+            # type=raw,value=latest,enable=${{ github.ref_name == 'master' || github.ref_name == 'main' }}
 
       - name: Build & push (push + PR aus gleichem Repo)
         id: build
